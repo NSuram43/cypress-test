@@ -4,3 +4,5 @@ cypress.env.json
 reports/
 videos/
 screenshots/
+json-logs/
+cucumber-report.json
