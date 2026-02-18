@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
     "cypress:open": "cypress open",
-    "cypress:run": "cypress run --spec 'cypress/e2e/**/*.feature'"
+    "cypress:run": "cypress run"
   },
   "keywords": [],
   "author": "",
@@ -17,12 +17,30 @@
     "@cypress/webpack-preprocessor": "^6.0.4",
     "@types/node": "latest",
     "cypress": "^14.5.1",
-    "cypress-mochawesome-reporter": "^4.0.2",
     "esbuild": "^0.25.6",
     "eslint": "^8.57.1",
     "exceljs": "^4.4.0",
+    "multiple-cucumber-html-reporter": "^3.10.0",
     "sinon": "^21.0.0",
     "ts-node": "latest",
     "typescript": "^5.5.4"
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": true,
+    "stepDefinitions":[ "cypress/e2e/step_definitions/**/*.{js,ts}","cypress/e2e/[filePath].{js,ts}" ],
+    "filterSpecs": true,
+    "json": {
+      "enabled": true,
+      "formatter": "cucumber-json-formatter.exe",
+      "output": "./json-logs/report.json",
+      "message":{
+        "enabled": true,
+        "output": "./json-logs/cucumber-messages.ndjson"
+      }
+    },
+    "html":{
+      "enabled": true,
+      "reportName":"Cypress Demo Report"
+    }
   }
 }

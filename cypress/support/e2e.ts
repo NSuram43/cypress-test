@@ -15,7 +15,6 @@
 
 // Import commands.js using ES2015 syntax:
 import "./commands";
-import "cypress-mochawesome-reporter/register";
 
 // The application under test (automationexercise.com) has disruptive ads
 // that can cause tests to fail. This intercepts ad requests and blocks them,
