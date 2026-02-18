@@ -13,15 +13,16 @@
   "devDependencies": {
     "@badeball/cypress-cucumber-preprocessor": "latest",
     "@bahmutov/cypress-esbuild-preprocessor": "latest",
-    "@cucumber/pretty-formatter":"^1.0.1",
+    "@cucumber/pretty-formatter": "^1.0.1",
     "@cypress/webpack-preprocessor": "^6.0.4",
     "@types/node": "latest",
     "cypress": "^14.5.1",
+    "cypress-mochawesome-reporter": "^4.0.2",
     "esbuild": "^0.25.6",
+    "eslint": "^8.57.1",
     "exceljs": "^4.4.0",
+    "sinon": "^21.0.0",
     "ts-node": "latest",
-    "typescript": "^5.5.4",
-    "sinon":"^21.0.0",
-    "eslint":"^8.57.1"
+    "typescript": "^5.5.4"
   }
 }

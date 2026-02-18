@@ -10,8 +10,10 @@ export default defineConfig({
     supportFile: "cypress/support/e2e.ts",
     watchForFileChanges: false,
     chromeWebSecurity: false,
+    reporter: "cypress-mochawesome-reporter",
     async setupNodeEvents(on, config) {
       await addCucumberPreprocessorPlugin(on, config);
+      await require("cypress-mochawesome-reporter/plugin")(on);
       on(
         "file:preprocessor",
         createBundler({
